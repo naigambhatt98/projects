@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Building a Personal AI Financial Assistant</title>
+  <title>Naigam Bhatt – Portfolio</title>
   <style>
     :root {
       --primary: #4a148c;
@@ -68,65 +68,46 @@
       font-size: 1.05rem;
     }
 
-    blockquote {
-      font-style: italic;
-      color: #555;
-      border-left: 4px solid var(--accent);
-      background: #f0eafa;
-      padding: 1rem 1.5rem;
-      margin: 2rem 0;
-      border-radius: 6px;
-    }
-
     a {
       color: var(--primary);
       text-decoration: underline;
     }
 
-    .carousel {
-      position: relative;
-      width: 100%;
-      max-width: 100%;
-      margin: 2rem auto;
-      overflow: hidden;
+    .blog-tile {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid #ddd;
       border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      margin-top: 2rem;
+      transition: transform 0.2s ease;
     }
 
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
+    .blog-tile:hover {
+      transform: scale(1.02);
     }
 
-    .carousel-slide {
-      min-width: 100%;
-      box-sizing: border-box;
-      padding: 10px;
-    }
-
-    .carousel-slide img {
+    .blog-preview-img {
       width: 100%;
+      display: block;
       height: auto;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
     }
 
-    .carousel-buttons {
-      text-align: center;
-      margin-top: 1rem;
+    .blog-content {
+      padding: 1.2rem;
     }
 
-    .carousel-buttons button {
-      cursor: pointer;
-      border: none;
-      padding: 10px;
-      margin: 0 5px;
-      border-radius: 50%;
-      background-color: #ccc;
+    .blog-title {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin: 0 0 0.5rem;
     }
 
-    .carousel-buttons button:hover {
-      background-color: var(--accent);
+    .blog-desc {
+      font-size: 1rem;
+      color: #555;
     }
 
     footer {
@@ -157,88 +138,35 @@
 </head>
 <body>
   <header>
-    <h1>Creating a Personal AI Financial Assistant</h1>
-    <p>Reflections on design, iteration, and generative AI</p>
+    <h1>Naigam Bhatt</h1>
+    <p>Creative Robotics Engineer | AI Explorer | Vision Systems Designer</p>
   </header>
 
   <div class="container">
-    <h2>Why I Chose This Project</h2>
+    <h2>Bio</h2>
     <p>
-      I’ve always been drawn to practical applications of AI. When given the chance to create something that blended utility with creativity, I wanted to focus on a problem people face every day. Personal finance felt like the right space to explore.
+      I’m Naigam Bhatt, a robotics engineer with a Master’s degree in Mechatronics, Robotics, and Automation Engineering from NYU. With nearly three years of experience working on real-time 3D perception pipelines, multi-camera robotics, and GPU-accelerated vision systems, I specialize in blending creative problem solving with technical rigor.
     </p>
     <p>
-      The goal was to use generative AI not just for rapid prototyping but to guide thoughtful experience design. Canva’s generative site builder enabled me to iterate quickly and shape ideas into a working user flow.
+      I have built complete pipelines that support 60Hz real-time robotic mapping using multiple 3D cameras, developed efficient CUDA kernels for geometric algorithms, and contributed to research published in ISMR 2023.
     </p>
 
-    <h2>Visuals & Process</h2>
+    <h2>Value Proposition</h2>
+    <p>
+      I bring a deep understanding of both software and hardware in robotics, enabling me to design holistic systems. I focus on building reliable, real-time, and efficient perception pipelines that scale, while making design decisions that balance performance, clarity, and usability.
+    </p>
 
-    <div class="carousel">
-      <div class="carousel-track" id="carouselTrack">
-        <div class="carousel-slide"><img src="Screenshot 2025-07-13 170037.png" alt="Assistant Homepage"></div>
-        <div class="carousel-slide"><img src="Screenshot 2025-07-13 170049.png" alt="Investment Section"></div>
-        <div class="carousel-slide"><img src="Screenshot 2025-07-13 170059.png" alt="Budgeting Tool"></div>
+    <a class="blog-tile" href="financial-assistant-blog.html">
+      <img class="blog-preview-img" src="Screenshot 2025-07-13 170037.png" alt="AI Financial Assistant Preview">
+      <div class="blog-content">
+        <div class="blog-title">Building a Personal AI Financial Assistant</div>
+        <div class="blog-desc">A hands-on exploration of Canva's AI-powered prototyping tools to design a friendlier approach to personal finance. See how design, iteration, and generative AI came together in this concept project.</div>
       </div>
-    </div>
-    <div class="carousel-buttons">
-      <button onclick="moveCarousel(0)"></button>
-      <button onclick="moveCarousel(1)"></button>
-      <button onclick="moveCarousel(2)"></button>
-    </div>
-
-    <p>
-      I used <strong>Canva’s generative AI features</strong> to design an interactive prototype of a personal financial assistant. Rather than starting with raw code, I mapped out the user journey visually. Explore it here:
-      <a href="https://historyofartificailintelligence.my.canva.site/financial-assistant-concept-with-clickable-options" target="_blank">View Financial Assistant Site</a>.
-    </p>
-
-    <p>
-      I began with a prompt: <em>"Design a homepage for a financial planning assistant with clean layout, bold section titles, and input forms."</em> Canva offered several variants, and I refined the ones with strong CTA and visual clarity—eventually leading to this third iteration.
-    </p>
-
-    <h2>Design Thinking and Generative AI</h2>
-    <p>
-      This wasn’t about building another webpage—it was about building trust. I asked myself: What would someone need from an assistant when they're overwhelmed with finances? The answers: clarity, simplicity, and a sense of control.
-    </p>
-    <p>
-      With AI-assisted tools, I could iterate rapidly. I crafted each module as a friendly guide, making sure the tone felt helpful, not robotic.
-    </p>
-
-    <blockquote>
-      "Generative AI let me focus on <strong>intent</strong> over interface. I could act as both a designer and a decision-maker."
-    </blockquote>
-
-    <h2>What I Learned</h2>
-    <p>
-      This experience showed me that the best AI tools don’t replace thought—they accelerate it. Canva’s interface reduced busywork and freed up space for real UX thinking.
-    </p>
-    <p>
-      I also learned the value of modular design. Each assistant tool—budgeting, saving, investing—was its own component, making the process clearer and output cleaner.
-    </p>
-
-    <h2>How to Create Something Like This</h2>
-    <p>
-      Want to explore Canva’s AI tools for building similar prototypes? Here’s a helpful overview:
-      <a href="https://www.canva.com/ai-assistant/" target="_blank">Canva AI Assistant Overview</a>.
-    </p>
-
-    <h2>Conclusion</h2>
-    <p>
-      My financial assistant prototype is a small glimpse of what’s possible when thoughtful design meets powerful AI tools. If it can reduce someone's anxiety around money, it's done its job.
-    </p>
-    <p>
-      Try it out:
-      <a href="https://historyofartificailintelligence.my.canva.site/financial-assistant-concept-with-clickable-options" target="_blank">Visit the Assistant</a>.
-    </p>
+    </a>
   </div>
 
   <footer>
-    Published as part of an independent blog on creativity, design, and AI thinking.
+    Published as part of Naigam Bhatt’s portfolio — exploring real-time robotics, creative AI, and purposeful design.
   </footer>
-
-  <script>
-    function moveCarousel(index) {
-      const track = document.getElementById('carouselTrack');
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
-  </script>
 </body>
 </html>
