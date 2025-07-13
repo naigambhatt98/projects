@@ -10,71 +10,120 @@
       --accent: #ba68c8;
       --bg: #f9f9ff;
       --text: #333;
+      --card-bg: #ffffff;
+      --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
       margin: 0;
-      padding: 2rem 1rem;
+      background-color: var(--bg);
+      color: var(--text);
       line-height: 1.7;
+      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-sizing: border-box;
     }
+
     header {
       background: linear-gradient(to right, var(--primary), #6a1b9a);
       color: white;
       padding: 3rem 1rem;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+
     .container {
-      width: 95%;
-      max-width: 850px;
-      margin: auto;
-      padding: 3rem 2rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      box-sizing: border-box;
+      max-width: 900px;
+      width: 100%;
+      margin: 2rem auto;
+      background: var(--card-bg);
+      padding: 2.5rem 2rem;
+      border-radius: 14px;
+      box-shadow: var(--card-shadow);
     }
+
     h2 {
+      font-size: 1.7rem;
       color: var(--primary);
-      margin-top: 3rem;
-      font-size: 1.6rem;
       border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.3rem;
+      padding-bottom: 0.4rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
     }
+
     p {
       margin-bottom: 1.2rem;
+      font-size: 1.05rem;
     }
+
     blockquote {
       font-style: italic;
       color: #555;
       border-left: 4px solid var(--accent);
-      margin: 1rem 0;
-      padding-left: 1rem;
       background: #f0eafa;
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 6px;
     }
+
     a {
       color: var(--primary);
       text-decoration: underline;
     }
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-      margin-top: 1rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+    .image-gallery {
+      text-align: center;
+      margin: 2rem 0;
     }
+
+    .image-gallery img {
+      max-width: 90%;
+      margin: 20px auto;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.02);
+    }
+
     footer {
       text-align: center;
       font-size: 0.9rem;
       color: #777;
-      margin: 3rem 0 1rem 0;
+      margin: 4rem 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem 1.2rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -84,65 +133,63 @@
     <p>Reflections on design, iteration, and generative AI</p>
   </header>
 
-  
-    
-
-        <h2>Why I Chose This Project</h2>
+  <div class="container">
+    <h2>Why I Chose This Project</h2>
     <p>
-      I’ve always been drawn to practical applications of AI. When given the chance to create something that blended utility with creativity, I wanted to focus on a problem people face every day. Personal finance felt like the right space to explore. Financial literacy and planning are challenges many deal with, so I designed an assistant to help make those decisions easier.
+      I’ve always been drawn to practical applications of AI. When given the chance to create something that blended utility with creativity, I wanted to focus on a problem people face every day. Personal finance felt like the right space to explore.
     </p>
     <p>
       The goal was to use generative AI not just for rapid prototyping but to guide thoughtful experience design. Canva’s generative site builder enabled me to iterate quickly and shape ideas into a working user flow.
     </p>
 
     <h2>Visuals & Process</h2>
-<div style="text-align:center;">
-  <img src="Screenshot 2025-07-13 170037.png" alt="Assistant Homepage" style="max-width:90%;margin:20px auto;border-radius:8px;border:1px solid #ccc;">
-  <img src="Screenshot 2025-07-13 170049.png" alt="Investment Section" style="max-width:90%;margin:20px auto;border-radius:8px;border:1px solid #ccc;">
-  <img src="Screenshot 2025-07-13 170059.png" alt="Budgeting Tool" style="max-width:90%;margin:20px auto;border-radius:8px;border:1px solid #ccc;">
-</div>
+    <div class="image-gallery">
+      <img src="Screenshot 2025-07-13 170037.png" alt="Assistant Homepage">
+      <img src="Screenshot 2025-07-13 170049.png" alt="Investment Section">
+      <img src="Screenshot 2025-07-13 170059.png" alt="Budgeting Tool">
+    </div>
 
     <p>
-      I used <strong>Canva’s generative AI features</strong> to design an interactive prototype of a personal financial assistant. Rather than starting with raw code, I mapped out the user journey visually, integrating tools like a Budget Planner, Savings Tracker, and Investment Advisor through clickable elements and form-based pages. You can explore it here:
+      I used <strong>Canva’s generative AI features</strong> to design an interactive prototype of a personal financial assistant. Rather than starting with raw code, I mapped out the user journey visually. Explore it here:
       <a href="https://historyofartificailintelligence.my.canva.site/financial-assistant-concept-with-clickable-options" target="_blank">View Financial Assistant Site</a>.
     </p>
-    <p>
-       I started by prompting Canva with: <em>"Design a homepage for a financial planning assistant with clean layout, bold section titles, and input forms."</em> This produced multiple design variants. I iterated by selecting layouts with clear call-to-actions and visually distinct sections, and adjusted colors, icons, and headings to enhance clarity.
 
-For example, I first emphasized a wide header with a mission-like tagline, then created separate cards for tools like budgeting and investing. These screenshots reflect the third iteration of this assistant's interface, optimized for simplicity and confidence-building.
+    <p>
+      I began with a prompt: <em>"Design a homepage for a financial planning assistant with clean layout, bold section titles, and input forms."</em> Canva offered several variants, and I refined the ones with strong CTA and visual clarity—eventually leading to this third iteration.
+    </p>
 
     <h2>Design Thinking and Generative AI</h2>
     <p>
       This wasn’t about building another webpage—it was about building trust. I asked myself: What would someone need from an assistant when they're overwhelmed with finances? The answers: clarity, simplicity, and a sense of control.
     </p>
     <p>
-      With AI-assisted tools, I could iterate rapidly. I crafted each module as a friendly guide, making sure the tone felt helpful, not robotic. The assistant’s layout reflects this philosophy: clear categories, modular features, and just enough input to reduce friction.
+      With AI-assisted tools, I could iterate rapidly. I crafted each module as a friendly guide, making sure the tone felt helpful, not robotic.
     </p>
+
     <blockquote>
       "Generative AI let me focus on <strong>intent</strong> over interface. I could act as both a designer and a decision-maker."
     </blockquote>
 
     <h2>What I Learned</h2>
     <p>
-      This experience showed me that the best AI tools don’t replace thought—they accelerate it. Canva’s generative interface reduced busywork and freed up mental space for UX thinking. Even without programming, I could design logic, test structure, and create something functional.
+      This experience showed me that the best AI tools don’t replace thought—they accelerate it. Canva’s interface reduced busywork and freed up space for real UX thinking.
     </p>
     <p>
-      I also learned the value of modular design. Each assistant tool—budgeting, saving, investing—was treated as its own component, which made the process clearer and the output cleaner.
+      I also learned the value of modular design. Each assistant tool—budgeting, saving, investing—was its own component, making the process clearer and output cleaner.
     </p>
 
     <h2>How to Create Something Like This</h2>
     <p>
-      If you're curious about how to use Canva’s AI tools to build similar experiences, here's a helpful tutorial article from Canva's official learn platform:
+      Want to explore Canva’s AI tools for building similar prototypes? Here’s a helpful overview:
       <a href="https://www.canva.com/ai-assistant/" target="_blank">Canva AI Assistant Overview</a>.
     </p>
-    
 
     <h2>Conclusion</h2>
     <p>
-      My financial assistant prototype is just one example of what can happen when thoughtful design meets the power of generative AI. It's not just about automation—it's about amplifying creativity and clarity. If this kind of tool can help someone feel less anxious about money, then it’s done its job.
+      My financial assistant prototype is a small glimpse of what’s possible when thoughtful design meets powerful AI tools. If it can reduce someone's anxiety around money, it's done its job.
     </p>
     <p>
-      Try it out here:
+      Try it out:
       <a href="https://historyofartificailintelligence.my.canva.site/financial-assistant-concept-with-clickable-options" target="_blank">Visit the Assistant</a>.
     </p>
   </div>
