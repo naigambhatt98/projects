@@ -83,22 +83,67 @@
       text-decoration: underline;
     }
 
-    .image-gallery {
-      text-align: center;
+    /* Carousel Styling */
+    .carousel {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
       margin: 2rem 0;
     }
 
-    .image-gallery img {
-      max-width: 90%;
-      margin: 20px auto;
+    .slides {
+      display: flex;
+      width: 300%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
       border-radius: 10px;
       border: 1px solid #ccc;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
       transition: transform 0.3s ease;
     }
 
-    .image-gallery img:hover {
-      transform: scale(1.02);
+    .carousel:hover img {
+      transform: scale(1.01);
+    }
+
+    input[name="slider"] {
+      display: none;
+    }
+
+    .navigation-manual {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .manual-btn {
+      cursor: pointer;
+      border: none;
+      padding: 8px;
+      margin: 0 4px;
+      background-color: #ccc;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    .manual-btn:hover,
+    .manual-btn:focus {
+      background-color: var(--accent);
+    }
+
+    #slide1:checked ~ .carousel .slides {
+      transform: translateX(0%);
+    }
+
+    #slide2:checked ~ .carousel .slides {
+      transform: translateX(-100%);
+    }
+
+    #slide3:checked ~ .carousel .slides {
+      transform: translateX(-200%);
     }
 
     footer {
@@ -133,6 +178,11 @@
     <p>Reflections on design, iteration, and generative AI</p>
   </header>
 
+  <!-- Carousel Radio Buttons -->
+  <input type="radio" name="slider" id="slide1" checked>
+  <input type="radio" name="slider" id="slide2">
+  <input type="radio" name="slider" id="slide3">
+
   <div class="container">
     <h2>Why I Chose This Project</h2>
     <p>
@@ -143,10 +193,21 @@
     </p>
 
     <h2>Visuals & Process</h2>
-    <div class="image-gallery">
-      <img src="Screenshot 2025-07-13 170037.png" alt="Assistant Homepage">
-      <img src="Screenshot 2025-07-13 170049.png" alt="Investment Section">
-      <img src="Screenshot 2025-07-13 170059.png" alt="Budgeting Tool">
+
+    <!-- Carousel Container -->
+    <div class="carousel">
+      <div class="slides">
+        <img src="Screenshot 2025-07-13 170037.png" alt="Assistant Homepage">
+        <img src="Screenshot 2025-07-13 170049.png" alt="Investment Section">
+        <img src="Screenshot 2025-07-13 170059.png" alt="Budgeting Tool">
+      </div>
+    </div>
+
+    <!-- Carousel Navigation Dots -->
+    <div class="navigation-manual">
+      <label for="slide1" class="manual-btn"></label>
+      <label for="slide2" class="manual-btn"></label>
+      <label for="slide3" class="manual-btn"></label>
     </div>
 
     <p>
