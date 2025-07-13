@@ -83,67 +83,50 @@
       text-decoration: underline;
     }
 
-    /* Carousel Styling */
     .carousel {
       position: relative;
       width: 100%;
+      max-width: 100%;
+      margin: 2rem auto;
       overflow: hidden;
       border-radius: 12px;
-      box-shadow: var(--card-shadow);
-      margin: 2rem 0;
     }
 
-    .slides {
+    .carousel-track {
       display: flex;
-      width: 300%;
       transition: transform 0.5s ease-in-out;
     }
 
-    .slides img {
+    .carousel-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    .carousel-slide img {
       width: 100%;
+      height: auto;
       border-radius: 10px;
       border: 1px solid #ccc;
-      transition: transform 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
     }
 
-    .carousel:hover img {
-      transform: scale(1.01);
-    }
-
-    input[name="slider"] {
-      display: none;
-    }
-
-    .navigation-manual {
+    .carousel-buttons {
       text-align: center;
       margin-top: 1rem;
     }
 
-    .manual-btn {
+    .carousel-buttons button {
       cursor: pointer;
       border: none;
-      padding: 8px;
-      margin: 0 4px;
-      background-color: #ccc;
+      padding: 10px;
+      margin: 0 5px;
       border-radius: 50%;
-      transition: background-color 0.3s;
+      background-color: #ccc;
     }
 
-    .manual-btn:hover,
-    .manual-btn:focus {
+    .carousel-buttons button:hover {
       background-color: var(--accent);
-    }
-
-    #slide1:checked ~ .carousel .slides {
-      transform: translateX(0%);
-    }
-
-    #slide2:checked ~ .carousel .slides {
-      transform: translateX(-100%);
-    }
-
-    #slide3:checked ~ .carousel .slides {
-      transform: translateX(-200%);
     }
 
     footer {
@@ -178,11 +161,6 @@
     <p>Reflections on design, iteration, and generative AI</p>
   </header>
 
-  <!-- Carousel Radio Buttons -->
-  <input type="radio" name="slider" id="slide1" checked>
-  <input type="radio" name="slider" id="slide2">
-  <input type="radio" name="slider" id="slide3">
-
   <div class="container">
     <h2>Why I Chose This Project</h2>
     <p>
@@ -194,20 +172,17 @@
 
     <h2>Visuals & Process</h2>
 
-    <!-- Carousel Container -->
     <div class="carousel">
-      <div class="slides">
-        <img src="Screenshot 2025-07-13 170037.png" alt="Assistant Homepage">
-        <img src="Screenshot 2025-07-13 170049.png" alt="Investment Section">
-        <img src="Screenshot 2025-07-13 170059.png" alt="Budgeting Tool">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide"><img src="Screenshot 2025-07-13 170037.png" alt="Assistant Homepage"></div>
+        <div class="carousel-slide"><img src="Screenshot 2025-07-13 170049.png" alt="Investment Section"></div>
+        <div class="carousel-slide"><img src="Screenshot 2025-07-13 170059.png" alt="Budgeting Tool"></div>
       </div>
     </div>
-
-    <!-- Carousel Navigation Dots -->
-    <div class="navigation-manual">
-      <label for="slide1" class="manual-btn"></label>
-      <label for="slide2" class="manual-btn"></label>
-      <label for="slide3" class="manual-btn"></label>
+    <div class="carousel-buttons">
+      <button onclick="moveCarousel(0)"></button>
+      <button onclick="moveCarousel(1)"></button>
+      <button onclick="moveCarousel(2)"></button>
     </div>
 
     <p>
@@ -258,5 +233,12 @@
   <footer>
     Published as part of an independent blog on creativity, design, and AI thinking.
   </footer>
+
+  <script>
+    function moveCarousel(index) {
+      const track = document.getElementById('carouselTrack');
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+  </script>
 </body>
 </html>
