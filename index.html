@@ -74,7 +74,8 @@
     }
 
     .blog-tile {
-      display: block;
+      display: flex;
+      flex-direction: column;
       text-decoration: none;
       color: var(--text);
       border: 1px solid #ddd;
@@ -83,30 +84,34 @@
       box-shadow: var(--card-shadow);
       margin-top: 2rem;
       transition: transform 0.2s ease;
+      width: 100%;
+      max-width: 500px;
     }
 
     .blog-tile:hover {
       transform: scale(1.02);
     }
 
+    .blog-header {
+      background: rgba(74, 20, 140, 0.85);
+      color: white;
+      padding: 0.8rem 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
     .blog-preview-img {
       width: 100%;
-      display: block;
       height: auto;
+      display: block;
     }
 
     .blog-content {
-      padding: 1.2rem;
-    }
-
-    .blog-title {
-      font-size: 1.3rem;
-      color: var(--primary);
-      margin: 0 0 0.5rem;
+      padding: 1rem 1.2rem;
     }
 
     .blog-desc {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #555;
     }
 
@@ -157,9 +162,9 @@
     </p>
 
     <a class="blog-tile" href="financial-assistant-blog.html">
+      <div class="blog-header">Building a Personal AI Financial Assistant</div>
       <img class="blog-preview-img" src="Screenshot 2025-07-13 170037.png" alt="AI Financial Assistant Preview">
       <div class="blog-content">
-        <div class="blog-title">Building a Personal AI Financial Assistant</div>
         <div class="blog-desc">A hands-on exploration of Canva's AI-powered prototyping tools to design a friendlier approach to personal finance. See how design, iteration, and generative AI came together in this concept project.</div>
       </div>
     </a>
