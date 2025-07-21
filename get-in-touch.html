@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get In Touch – Naigam Bhatt</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Contact Section Styles */
+    .contact-section {
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .contact-section a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .contact-section a:hover {
+      color: var(--secondary-color);
+    }
+    .social-links {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .social-link {
+      text-decoration: none;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s;
+    }
+    .social-link:hover {
+      color: var(--primary-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-animation"></div>
+
+  <header>
+    <div class="header-content">
+      <div class="profile-photo">
+        <img src="assets/profile.PNG" alt="Naigam Bhatt">
+      </div>
+      <div class="profile-info">
+        <h1 class="name-title">Get In Touch</h1>
+        <p class="subtitle">Have a project idea or just want to say hi? I'd love to hear from you.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section id="contact" class="section contact-section">
+      <h2 class="section-title fade-in">Contact Me</h2>
+      <p class="fade-in">I'm always excited to hear about new projects or collaborations. Please drop me a line at <a href="mailto:naigambhatt98@gmail.com">naigambhatt98@gmail.com</a> or feel free to connect via <a href="https://www.linkedin.com/in/naigam-bhatt-7312ab134/" target="_blank">LinkedIn</a>.</p>
+
+      <div class="social-links fade-in">
+        <a href="mailto:naigambhatt98@gmail.com" class="social-link">✉️ Email</a>
+        <a href="https://www.linkedin.com/in/naigam-bhatt-7312ab134/" class="social-link" target="_blank">🔗 LinkedIn</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Naigam Bhatt • Crafted with passion for robotics, AI, and meaningful innovation</p>
+  </footer>
+
+  <script>
+    // Reuse fade-in animation and smooth scroll
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.style.animationPlayState = 'running';
+      });
+    }, observerOptions);
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
+    
