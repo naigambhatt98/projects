@@ -5,61 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Machine Learning vs Deep Learning – Naigam Bhatt</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #f9f9ff;
-      color: #333;
-      line-height: 1.7;
-    }
-    header {
-      background: linear-gradient(to right, #4a148c, #6a1b9a);
-      color: white;
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
-    }
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    }
-    h2 {
-      color: #4a148c;
-      border-bottom: 2px solid #ba68c8;
-      padding-bottom: 0.4rem;
-      margin-top: 2rem;
-    }
-    p {
-      margin-bottom: 1.2rem;
-      font-size: 1.05rem;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin: 1rem 0;
-    }
-    blockquote {
-      font-style: italic;
-      color: #555;
-      border-left: 4px solid #ba68c8;
-      background: #f0eafa;
-      padding: 1rem 1.5rem;
-      margin: 2rem 0;
-      border-radius: 6px;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      margin: 4rem 0 2rem;
-    }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f9f9ff; color: #333; line-height: 1.7; }
+    header { background: linear-gradient(to right, #4a148c, #6a1b9a); color: white; padding: 3rem 1rem; text-align: center; }
+    header h1 { font-size: 2.5rem; margin: 0.5rem 0; }
+    .container { max-width: 900px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 14px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); }
+    h2 { color: #4a148c; border-bottom: 2px solid #ba68c8; padding-bottom: 0.4rem; margin-top: 2rem; }
+    h3 { color: #6a1b9a; margin-top: 1.5rem; }
+    p { margin-bottom: 1.2rem; font-size: 1.05rem; }
+    ul { margin-left: 1.2rem; margin-bottom: 1.2rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.8rem; text-align: left; font-size: 1rem; }
+    th { background-color: #f3e5f5; color: #4a148c; }
+    figure { text-align: center; margin: 2rem 0; }
+    img { max-width: 100%; border-radius: 10px; margin: 1rem 0; }
+    figcaption { font-size: 0.9rem; color: #555; margin-top: 0.5rem; }
+    blockquote { font-style: italic; color: #555; border-left: 4px solid #ba68c8; background: #f0eafa; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 6px; }
+    .references { margin-top: 3rem; font-size: 0.9rem; }
+    .references ol { padding-left: 1.2rem; }
+    .references li { margin-bottom: 0.5rem; }
+    footer { text-align: center; font-size: 0.9rem; color: #777; margin: 4rem 0 2rem; }
   </style>
 </head>
 <body>
@@ -67,41 +31,115 @@
     <h1>Machine Learning vs Deep Learning</h1>
     <p>Understanding the Spectrum of Modern AI</p>
   </header>
+
   <div class="container">
     <h2>Introduction</h2>
-    <p>Machine learning and deep learning are powerful tools in the AI toolbox. While both allow computers to learn from data, they differ in structure, scale, and application. This article walks you through their distinctions using visuals and real-world examples.</p>
+    <p>Artificial intelligence (AI) encompasses a broad set of techniques that enable computers to perform tasks that typically require human intelligence. Two key subsets of AI are machine learning (ML) and deep learning (DL). While ML algorithms rely on handcrafted features and simpler structures, DL uses multi-layered neural networks to learn end-to-end representations directly from raw data. In this article, we dive deeper into their definitions, workflows, architectures, advantages, challenges, and real-world applications.</p>
+    <figure>
+      <img src="assets/ml-dl-spectrum.png" alt="Spectrum showing ML and DL relationship placeholder" />
+      <figcaption>Figure 1: Relationship between Machine Learning and Deep Learning</figcaption>
+    </figure>
 
-    <h2>What is Machine Learning?</h2>
-    <p>Machine learning (ML) involves algorithms that parse data, learn from it, and make decisions. It often requires human engineers to extract features manually. Common techniques include:</p>
+    <h2>Machine Learning Overview</h2>
+    <p>Machine learning is a field of AI where algorithms infer patterns from data to make predictions or decisions without explicit programming for each task<sup><a href="#ref2">[2]</a></sup>. A typical ML workflow involves:</p>
+    <figure>
+      <img src="assets/ml-workflow.png" alt="Machine Learning Workflow Diagram placeholder" />
+      <figcaption>Figure 2: Typical Machine Learning Workflow</figcaption>
+    </figure>
     <ul>
-      <li>Linear regression</li>
-      <li>Decision trees</li>
-      <li>Support vector machines</li>
+      <li><strong>Data collection:</strong> Gathering relevant structured or unstructured data.</li>
+      <li><strong>Data preprocessing:</strong> Cleaning, normalizing, and transforming raw inputs.</li>
+      <li><strong>Feature engineering:</strong> Manually selecting or creating informative variables.</li>
+      <li><strong>Model selection:</strong> Choosing algorithms such as linear regression, decision trees, or support vector machines<sup><a href="#ref1">[1]</a></sup>.</li>
+      <li><strong>Training:</strong> Optimizing model parameters using algorithms like gradient descent.</li>
+      <li><strong>Evaluation:</strong> Assessing performance via metrics (accuracy, precision, recall).</li>
+      <li><strong>Hyperparameter tuning:</strong> Adjusting algorithm settings for optimal results.</li>
     </ul>
-    <img src="ml-example-placeholder.png" alt="ML Example Diagram">
-    <p>ML is great when the data isn't huge and when feature engineering can be done with domain knowledge.</p>
 
-    <h2>What is Deep Learning?</h2>
-    <p>Deep learning (DL) is a subset of ML that uses multi-layered neural networks to automatically discover features and patterns. It thrives on large datasets and computing power.</p>
-    <img src="dl-example-placeholder.png" alt="DL Neural Network Illustration">
-    <p>Common deep learning architectures include:</p>
+    <h2>Deep Learning Fundamentals</h2>
+    <p>Deep learning is a subset of ML characterized by neural networks with multiple hidden layers capable of automatically learning hierarchical feature representations<sup><a href="#ref2">[2]</a></sup>. Key concepts include:</p>
     <ul>
-      <li>Convolutional Neural Networks (CNNs)</li>
-      <li>Recurrent Neural Networks (RNNs)</li>
-      <li>Transformers</li>
+      <li><strong>Neurons and layers:</strong> Each neuron computes a weighted sum of inputs, applies an activation function, and passes outputs to the next layer.</li>
+      <li><strong>Backpropagation:</strong> Gradient-based method for updating weights through chained derivatives.</li>
+      <li><strong>Optimization:</strong> Use of stochastic gradient descent (SGD), Adam, and other optimizers for convergence.</li>
+      <li><strong>Regularization:</strong> Techniques like dropout, batch normalization, and weight decay to prevent overfitting.</li>
+      <li><strong>Hardware acceleration:</strong> Leveraging GPUs or TPUs to handle large matrix operations efficiently.</li>
     </ul>
+    <figure>
+      <img src="assets/dl-architecture.png" alt="Deep Learning Architecture Diagram placeholder" />
+      <figcaption>Figure 3: Typical Deep Neural Network Architecture</figcaption>
+    </figure>
+    <p>Popular deep learning architectures include Convolutional Neural Networks (CNN) for images<sup><a href="#ref3">[3]</a></sup>, Recurrent Neural Networks and LSTM/GRU for sequences, and Transformers for NLP and large-scale tasks.</p>
 
-    <h2>Comparison Table</h2>
-    <img src="ml-vs-dl-table-placeholder.png" alt="ML vs DL Table Comparison">
-    <blockquote>"Machine learning is like learning with guidance, while deep learning is like learning by experience."</blockquote>
+    <h2>Side-by-Side Comparison</h2>
+    <table>
+      <thead>
+        <tr><th>Aspect</th><th>Machine Learning</th><th>Deep Learning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Data requirements</td><td>Moderate (10³–10⁴ samples)</td><td>High (10⁵–10⁶ samples)</td></tr>
+        <tr><td>Feature engineering</td><td>manual</td><td>automatic</td></tr>
+        <tr><td>Model complexity</td><td>shallow structures</td><td>deep, multi-layer networks</td></tr>
+        <tr><td>Compute resources</td><td>CPU sufficient</td><td>GPUs/TPUs required</td></tr>
+        <tr><td>Interpretability</td><td>higher</td><td>lower (black box)</td></tr>
+        <tr><td>Training time</td><td>fast</td><td>longer</td></tr>
+      </tbody>
+    </table>
 
-    <h2>Use Case Differences</h2>
-    <p><strong>ML:</strong> Email spam detection, fraud detection, price prediction.</p>
-    <p><strong>DL:</strong> Image recognition, natural language processing, self-driving car vision.</p>
+    <h2>Use Cases and Applications</h2>
+    <p><strong>Machine Learning:</strong> Email spam filtering, credit scoring, customer segmentation, predictive maintenance.</p>
+    <p><strong>Deep Learning:</strong> Image/video recognition, NLP, speech synthesis, autonomous vehicle perception, generative models.</p>
+
+    <h2>Real-World Application Examples</h2>
+
+    <h3>1. Machine Learning Example: Customer Churn Prediction in Telecom Industry</h3>
+    <p><strong>Real-World Application</strong><br>
+    A major telecom provider such as Verizon or AT&T uses machine learning to predict customer churn (whether a customer is likely to cancel service). The algorithm analyzes historical data such as call usage, customer support interactions, contract duration, and monthly charges.</p>
+    <p><strong>Why Machine Learning is Suitable</strong><br>
+    Algorithms like Support Vector Machines or decision trees excel with structured, tabular data. They perform well on labeled datasets with predefined features, require less data and compute power, and provide interpretable insights into factors such as contract type and billing issues.</p>
+    <p><strong>Why Deep Learning is Less Suitable</strong><br>
+    Deep learning is generally excessive for churn prediction, especially on small structured datasets. It demands far more data and computation, and the complex models offer limited gains and reduced interpretability in this context.</p>
+  
+
+    <h3>2. Deep Learning Example: Image Recognition in Facial Authentication Systems</h3>
+    <p><strong>Real-World Application</strong><br>
+    Apple’s Face ID uses Convolutional Neural Networks to authenticate users by analyzing facial structure captured by the front-facing camera.</p>
+    <p><strong>Why Deep Learning is Suitable</strong><br>
+    CNNs automatically learn hierarchical features from raw pixel data—from edges to complex facial patterns—ensuring robustness to lighting, angles, and occlusions, and delivering state-of-the-art accuracy.</p>
+    <p><strong>Why Traditional Machine Learning is Less Suitable</strong><br>
+    Classical ML algorithms struggle with high-dimensional image data, requiring fragile manual feature engineering and delivering inferior performance compared to CNNs.</p>
+
+    <h2>Pros and Cons</h2>
+    <p><strong>Machine Learning</strong><br>
+    Pro: Easier to interpret and debug; suitable for small to moderate datasets.<br>
+    Con: Requires manual feature engineering; may plateau on complex tasks.</p>
+    <p><strong>Deep Learning</strong><br>
+    Pro: Learns complex features automatically; excels on unstructured data.<br>
+    Con: Needs large labeled datasets; computationally expensive; less interpretable.</p>
+
+    <h2>Choosing the Right Approach</h2>
+    <p>Evaluate data volume, interpretability requirements, compute resources, task complexity, and time constraints when selecting between ML and DL.</p>
+
+    <h2>Future Trends</h2>
+    <p>Trends like transfer learning, self-supervised models, edge AI, hybrid ML-DL methods, and AutoML are bridging gaps and streamlining AI workflows<sup><a href="#ref2">[2]</a></sup>.</p>
+
+    <blockquote>"Technology evolves, but the core challenge remains: extracting meaningful insights from data."</blockquote>
 
     <h2>Conclusion</h2>
-    <p>Machine learning and deep learning are not competing technologies — they complement each other. Understanding their differences allows developers and businesses to choose the right tool for the task.</p>
+    <p>Customer churn prediction is best handled by machine learning due to structured data and interpretability. Facial recognition is best handled by deep learning due to the complexity of visual patterns in images.</p>
+    <p><strong>Summary Analogy</strong>: Machine learning is like giving a banker a checklist of red flags to detect a customer likely to leave. Deep learning is like training a robot to visually recognize people from different photos, lighting, and angles without a predefined checklist.</p>
+
+    <div class="references" id="references">
+      <h2>References</h2>
+      <ol>
+        <li id="ref1">Christopher M. Bishop. Pattern Recognition and Machine Learning. Springer, 2006.</li>
+        <li id="ref2">Ian Goodfellow, Yoshua Bengio, Aaron Courville. Deep Learning. MIT Press, 2016.</li>
+        <li id="ref3">Yann LeCun, Yoshua Bengio, Geoffrey E. Hinton. Deep learning. Nature 521, 436–444 (2015).</li>
+        <li id="ref4"><a href="https://www.youtube.com/watch?v=PeMlggyqz0Y">YouTube Video</a>. Machine Learning vs Deep Learning explained.</li>
+      </ol>
+    </div>
   </div>
+
   <footer>
     Written by Naigam Bhatt | Part of a class portfolio on AI and practical applications.
   </footer>

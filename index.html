@@ -4,183 +4,186 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Naigam Bhatt – Portfolio</title>
-  <style>
-    :root {
-      --primary: #4a148c;
-      --accent: #ba68c8;
-      --bg: #f9f9ff;
-      --text: #333;
-      --card-bg: #ffffff;
-      --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    header {
-      background: linear-gradient(to right, var(--primary), #6a1b9a);
-      color: white;
-      padding: 3rem 1rem;
-      text-align: center;
-      width: 100%;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
-    }
-
-    .container {
-      max-width: 900px;
-      width: 100%;
-      margin: 2rem auto;
-      background: var(--card-bg);
-      padding: 2.5rem 2rem;
-      border-radius: 14px;
-      box-shadow: var(--card-shadow);
-    }
-
-    h2 {
-      font-size: 1.7rem;
-      color: var(--primary);
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.4rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      margin-bottom: 1.2rem;
-      font-size: 1.05rem;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: underline;
-    }
-
-    .blog-tile {
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      color: var(--text);
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--card-shadow);
-      margin-top: 2rem;
-      transition: transform 0.2s ease;
-      width: 100%;
-      max-width: 500px;
-    }
-
-    .blog-tile:hover {
-      transform: scale(1.02);
-    }
-
-    .blog-header {
-      background: rgba(74, 20, 140, 0.85);
-      color: white;
-      padding: 0.8rem 1rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-
-    .blog-preview-img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .blog-content {
-      padding: 1rem 1.2rem;
-    }
-
-    .blog-desc {
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      margin: 4rem 0 2rem;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 2rem 1.2rem;
-      }
-
-      header h1 {
-        font-size: 2rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Naigam Bhatt</h1>
-    <p>Creative Robotics Engineer | AI Explorer | Vision Systems Designer</p>
-  </header>
+  <div class="bg-animation"></div>
 
-  <div class="container">
-    <h2>Bio</h2>
-    <p>
-      I’m Naigam Bhatt, a robotics engineer with a Master’s degree in Mechatronics, Robotics, and Automation Engineering from NYU. With nearly three years of experience working on real-time 3D perception pipelines, multi-camera robotics, and GPU-accelerated vision systems, I specialize in blending creative problem solving with technical rigor.
-    </p>
-    <p>
-      I have built complete pipelines that support 60Hz real-time robotic mapping using multiple 3D cameras, developed efficient CUDA kernels for geometric algorithms, and contributed to research published in ISMR 2023.
-    </p>
+<header>
+  <div class="header-content">
+    <div class="profile-photo">
+      <img src="assets/profile.PNG" alt="Naigam Bhatt">
+    </div>
 
-    <h2>Value Proposition</h2>
-    <p>
-      I bring a deep understanding of both software and hardware in robotics, enabling me to design holistic systems. I focus on building reliable, real-time, and efficient perception pipelines that scale, while making design decisions that balance performance, clarity, and usability.
-    </p>
+    <div class="profile-info">
+      <h1 class="name-title">Naigam Bhatt</h1>
+      <p class="subtitle">
+        Creative Robotics Engineer • AI Explorer • Vision Systems Designer
+      </p>
 
-    <a class="blog-tile" href="financial-assistant-blog.html">
-      <div class="blog-header">Building a Personal AI Financial Assistant</div>
-      <img class="blog-preview-img" src="Screenshot 2025-07-13 170037.png" alt="AI Financial Assistant Preview">
-      <div class="blog-content">
-        <div class="blog-desc">A hands-on exploration of Canva's AI-powered prototyping tools to design a friendlier approach to personal finance. See how design, iteration, and generative AI came together in this concept project.</div>
-      </div>
-    </a>
-    <a class="blog-tile" href="ml-vs-dl.html">
-      <div class="blog-header">Machine Learning vs Deep Learning</div>
-      <img class="blog-preview-img" src="ml-vs-dl-preview.png" alt="ML vs DL Preview">
-      <div class="blog-content">
-        <div class="blog-desc">
-          Explore the difference between machine learning and deep learning through an illustrated and structured breakdown. Learn when to use each, how they differ in data handling, complexity, and application areas.
+      <div class="header-stats">
+        <div class="stat fade-in">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat fade-in">
+          <span class="stat-number">60Hz</span>
+          <span class="stat-label">Real-time Systems</span>
+        </div>
+        <div class="stat fade-in">
+          <span class="stat-number">NYU</span>
+          <span class="stat-label">Master's Degree</span>
         </div>
       </div>
-    </a>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title fade-in">About Me</h2>
+      <div class="bio-content">
+        <div class="bio-text fade-in">
+          <p>
+            I'm Naigam Bhatt, a robotics engineer with a Master's degree in Mechatronics, Robotics, and Automation Engineering from NYU. With nearly three years of experience working on real-time 3D perception pipelines, multi-camera robotics, and GPU-accelerated vision systems, I specialize in blending creative problem solving with technical rigor.
+          </p>
+          <p>
+            I have built complete pipelines that support 60Hz real-time robotic mapping using multiple 3D cameras, developed efficient CUDA kernels for geometric algorithms, and contributed to research published in ISMR 2023.
+          </p>
+          <p>
+            I bring a deep understanding of both software and hardware in robotics, enabling me to design holistic systems. I focus on building reliable, real-time, and efficient perception pipelines that scale, while making design decisions that balance performance, clarity, and usability.
+          </p>
+        </div>
+        
+        <div class="skills-card fade-in">
+          <h3 class="skills-title">Core Expertise</h3>
+          <div class="skill-item">
+            <div class="skill-icon"></div>
+            <span>Real-time 3D Perception</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"></div>
+            <span>Multi-camera Robotics</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"></div>
+            <span>GPU-accelerated Vision</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"></div>
+            <span>CUDA Development</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"></div>
+            <span>System Architecture</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"></div>
+            <span>Creative AI Applications</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title fade-in">Featured Projects</h2>
+      <div class="projects-grid">
+        <a class="project-card fade-in" href="financial-assistant-blog.html">
+          <div class="project-image">
+            <img src="assets/Screenshot 2025-07-13 170037.png" alt="AI Financial Assistant">
+            <div class="project-overlay">
+              <div class="project-icon">🤖</div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">AI Financial Assistant</h3>
+            <p class="project-description">
+              A comprehensive exploration of Canva's AI-powered prototyping tools to design an intuitive personal finance platform. This project demonstrates how generative AI can accelerate thoughtful UX design and create user-focused financial tools.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Generative AI</span>
+              <span class="tag">UX Design</span>
+              <span class="tag">Fintech</span>
+              <span class="tag">Prototyping</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card fade-in" href="ml-vs-dl.html">
+          <div class="project-image">
+            <div class="project-overlay">
+              <div class="project-icon">🧠</div>
+            </div>
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+              🔬
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">ML vs Deep Learning Analysis</h3>
+            <p class="project-description">
+              An illustrated deep-dive into the fundamental differences between machine learning and deep learning. This educational piece breaks down complex AI concepts through visual storytelling and practical examples.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">Education</span>
+              <span class="tag">Analysis</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="cta-section fade-in">
+      <h2 class="cta-title">Let's Build Something Amazing</h2>
+      <p class="cta-subtitle">
+        Interested in collaborating on robotics, AI, or creative automation projects? 
+        I'd love to explore how we can push the boundaries together.
+      </p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        <a href="#portfolio" class="btn btn-secondary">View Full Portfolio</a>
+      </div>
+    </div>
   </div>
 
   <footer>
-    Published as part of Naigam Bhatt’s portfolio — exploring real-time robotics, creative AI, and purposeful design.
+    <p>© 2025 Naigam Bhatt • Crafted with passion for robotics, AI, and meaningful innovation</p>
   </footer>
+
+  <script>
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
