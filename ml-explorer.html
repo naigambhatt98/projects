@@ -371,6 +371,14 @@
       width: 0%;
       transition: width 0.1s ease;
     }
+    /* Add spacing before Introduction and Conclusion */
+    .intro:first-of-type {
+      margin-top: 3rem;
+    }
+
+    .intro:last-of-type {
+      margin-top: 6rem;
+    }
   </style>
 </head>
 <body>
@@ -400,7 +408,7 @@
           <div class="answer-content">
             <p>A supervised learning model learns by analyzing input-output pairs in the training data. The model creates a mapping function that connects inputs to their corresponding correct outputs, continuously adjusting its internal parameters to minimize prediction errors through optimization algorithms like gradient descent.</p>
             <p>The learning process involves iteratively comparing the model's predictions with the actual target values, calculating the error, and updating the model's weights to reduce this error over time.</p>
-            <div class="visual-placeholder">🧠 Supervised Learning Model Architecture</div>
+            <img src="assets/supervised-learning.png" alt="🧠 Supervised Learning Model Architecture" class="visual-placeholder" />
           </div>
         </div>
       </article>
@@ -414,7 +422,7 @@
           <div class="answer-content">
             <p>Unsupervised learning models are trained without labeled outputs or target values. Instead, they aim to discover hidden patterns and structures within the data itself. The main approaches include clustering (grouping similar data points), dimensionality reduction (finding lower-dimensional representations), and density estimation.</p>
             <p>These models learn by optimizing objective functions that capture the underlying data distribution, such as minimizing within-cluster variance or maximizing the likelihood of the observed data.</p>
-            <div class="visual-placeholder">🔍 Clustering & Pattern Discovery</div>
+            <img src="assets/clustering.png" alt="🔍 Clustering & Pattern Discovery" class="visual-placeholder" />
           </div>
         </div>
       </article>
@@ -428,7 +436,7 @@
           <div class="answer-content">
             <p>A reinforcement learning agent learns through trial and error by interacting with its environment. The agent takes actions, observes the resulting states, and receives rewards or penalties as feedback. Over time, it develops a policy that maximizes cumulative rewards.</p>
             <p>The learning process involves balancing exploration (trying new actions) with exploitation (using known good actions), often using techniques like Q-learning or policy gradient methods to improve decision-making strategies.</p>
-            <div class="visual-placeholder">🎯 Agent-Environment Interaction Loop</div>
+            <img src="assets/agent-environment.png" alt="🎯 Agent-Environment Interaction Loop" class="visual-placeholder" />
           </div>
         </div>
       </article>
