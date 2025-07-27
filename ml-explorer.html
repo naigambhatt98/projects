@@ -389,27 +389,38 @@
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     }
     .visual-glass {
-      background: linear-gradient(135deg, rgba(100, 255, 218, 0.1) 0%, rgba(120, 119, 198, 0.1) 100%);
+      background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(120, 119, 198, 0.1));
       border: 2px dashed rgba(100, 255, 218, 0.3);
       border-radius: 16px;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 1.5rem;
       margin: 2rem 0;
       position: relative;
       overflow: hidden;
       backdrop-filter: blur(20px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
     }
 
     .visual-glass img {
-      max-width: 100%;
+      width: 100%;
+      max-width: 700px;
       height: auto;
       border-radius: 12px;
+      display: block;
+      margin: 0 auto;
       z-index: 1;
     }
 
-    /* Shimmer animation like placeholder */
+    .visual-caption {
+      margin-top: 1rem;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.6;
+      z-index: 1;
+      position: relative;
+    }
+
+    /* Shimmer */
     .visual-glass::before {
       content: '';
       position: absolute;
@@ -452,6 +463,7 @@
             <p>The learning process involves iteratively comparing the model's predictions with the actual target values, calculating the error, and updating the model's weights to reduce this error over time.</p>
             <div class="visual-glass">
               <img src="assets/supervised-learning.png" alt="Supervised Learning Model Architecture" />
+              <p class="visual-caption">Figure: A supervised learning model maps labeled input data to known outputs through training.</p>
             </div>
           </div>
         </div>
@@ -467,7 +479,8 @@
             <p>Unsupervised learning models are trained without labeled outputs or target values. Instead, they aim to discover hidden patterns and structures within the data itself. The main approaches include clustering (grouping similar data points), dimensionality reduction (finding lower-dimensional representations), and density estimation.</p>
             <p>These models learn by optimizing objective functions that capture the underlying data distribution, such as minimizing within-cluster variance or maximizing the likelihood of the observed data.</p>
             <div class="visual-glass">
-              <img src="assets/clustering.jpg" alt="🔍 Clustering & Pattern Discovery" />
+              <img src="assets/unsupervised-clustering.png" alt="Clustering and Pattern Discovery" />
+              <p class="visual-caption">Figure: Clustering groups similar data points without predefined labels in unsupervised learning.</p>
             </div>
           </div>
         </div>
@@ -483,7 +496,8 @@
             <p>A reinforcement learning agent learns through trial and error by interacting with its environment. The agent takes actions, observes the resulting states, and receives rewards or penalties as feedback. Over time, it develops a policy that maximizes cumulative rewards.</p>
             <p>The learning process involves balancing exploration (trying new actions) with exploitation (using known good actions), often using techniques like Q-learning or policy gradient methods to improve decision-making strategies.</p>
             <div class="visual-glass">
-              <img src="assets/agent-environment.png" alt="🎯 Agent-Environment Interaction Loop" />
+              <img src="assets/reinforcement-loop.png" alt="Agent Environment Interaction Loop" />
+              <p class="visual-caption">Figure: The reinforcement learning loop involves an agent learning optimal actions through feedback from the environment.</p>
             </div>
           </div>
         </div>
